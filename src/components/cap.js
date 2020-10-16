@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function Mycap() {
+function Cap() {
   
   // Hard coded (in Billion USD approx.)
   const gold   = 8200;
@@ -20,14 +20,12 @@ function Mycap() {
       .get(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true`)
       .then(res => {
         btcCap = (res.data.bitcoin.usd_market_cap/1000000000).toFixed(1)
-        console.log("BTC" + btcCap)
 
         axios
           .get(`https://api.coingecko.com/api/v3/global/decentralized_finance_defi`)
           .then(res => {
             defiCap = (res.data.data.defi_market_cap/1000000000).toFixed(1)
             ethCap = (res.data.data.eth_market_cap/1000000000).toFixed(1)
-            console.log("DEFI" + res.data.data.defi_market_cap)
 
             setCap({
               btc:    btcCap,
@@ -88,4 +86,4 @@ function Mycap() {
   )
 }
 
-export default Mycap
+export default Cap
