@@ -8,7 +8,7 @@ import Cap from './components/cap'
 function App() {
   return (
     <div className="App">
-      <h1>Assets stats</h1>
+      <h1>Asset stats</h1>
       <h2>Charts</h2>
       <div className="charts">
         <Crypto />

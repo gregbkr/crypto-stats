@@ -58,7 +58,7 @@ function Commodity() {
                 pointHitRadius: 10,
               },
               {
-                label: "S&M500",
+                label: "S&P500",
                 data: sp500Price,
                 backgroundColor: ["rgba(255, 150, 150, 0.6)"],
                 borderWidth: 4,
